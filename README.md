@@ -14,22 +14,22 @@ filled with data using the provided `.csv` files in the [sample_data](sample_dat
 
 ### Internal
 A working installation of [dbt](https://docs.getdbt.com/docs/get-started/installation).
+
+Most of the time this will be a `pip install dbt-postgres`
+
 Check with
 ```bash
 dbt --version
-installed version: 1.0.0
-   latest version: 1.0.0
+installed version: 1.6.6
+   latest version: 1.6.6
 
 Up to date!
 
 Plugins:
-  - postgres: 1.0.0```
+  - postgres: 1.6.6```
 ```
 
-Make sure you also installed the required [adapter for you database](https://docs.getdbt.com/docs/supported-data-platforms)
-for the postgres.
-
-The DB connection has to be setup in a `profiles.yml` file which can be generated using the
+The DB connection has to be setup in a `profiles.yml` file which can be created based on the
 provided [profiles_template.yml](profiles_template.yml).
 
 ### Using the starter project
@@ -38,6 +38,7 @@ Try running the following commands:
 - dbt run
 - dbt test
 
+Use a Database Management Tool like TablePlus, DBeaver or pgadmin to see the effects in the database.
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
