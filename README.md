@@ -9,7 +9,7 @@ In order to run the dbt demo we require a "running" SQL-DB.
 ```
 docker run --name some-postgres -e POSTGRES_PASSWORD=<secret> -e POSTGRES_USER=<user> -p 5432:5432 postgres
 ```
-Moreover, the demo expects two tables `public.names` and `public.additional_data` in the database these tables can be
+Moreover, the demo expects three tables `raw.raw_customers`, `raw.raw_orders` and `raw.raw_payments` in the database these tables can be
 filled with data using the provided `.csv` files in the [sample_data](sample_data) folder.
 
 ### Internal
