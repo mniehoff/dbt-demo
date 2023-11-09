@@ -30,7 +30,7 @@ Plugins:
 ```
 
 The DB connection has to be setup in a `profiles.yml` file which can be created based on the
-provided [profiles_template.yml](profiles_template.yml).
+provided [profiles_template.yml](profiles_template.yml). The file can be placed in the root of this repository (next to the README.md)
 
 ### Using the starter project
 
