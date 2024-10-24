@@ -8,15 +8,14 @@ packages = [{include = "dbt_demo"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-dbt-postgres = "^1.5.1"
+dbt-postgres = "^1.8.0"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.3.3"
-sqlfluff = "^2.1.1"
-sqlfluff-templater-dbt = "^2.1.1"
-ruff = "^0.0.274"
-elementary-data = "^0.8.2"
-data-diff = {version = "0.7.9", extras=["postgres"]}
+pre-commit = "^4.0.1"
+sqlfluff = "^3.2.4"
+sqlfluff-templater-dbt = "^3.2.4"
+ruff = "^0.7.1"
+elementary-data = "^0.16.1"
 
 [build-system]
 requires = ["poetry-core"]

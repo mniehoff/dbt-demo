@@ -15,7 +15,15 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.0.262"
+    rev: v0.7.1
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 3.2.4
+    hooks:
+      - id: sqlfluff-lint
+        additional_dependencies: ['dbt-postgres', 'sqlfluff-templater-dbt']
+        args: [--disregard-sqlfluffignores]
+      - id: sqlfluff-fix
+        additional_dependencies: ['dbt-postgres', 'sqlfluff-templater-dbt']
