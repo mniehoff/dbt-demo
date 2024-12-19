@@ -6,7 +6,7 @@ sources:
       - name: raw_customers
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique
               - not_null
           - name: first_name
@@ -15,11 +15,11 @@ sources:
       - name: raw_orders
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique
               - not_null
           - name: user_id
-            tests:
+            data_tests:
               - relationships:
                   to: source('raw','raw_customers')
                   field: id
@@ -29,11 +29,11 @@ sources:
       - name: raw_payments
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique
               - not_null
           - name: order_id
-            tests:
+            data_tests:
               - relationships:
                   to: source('raw','raw_orders')
                   field: id
